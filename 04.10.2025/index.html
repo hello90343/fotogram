@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fotogramm</title>
+    <link rel="shortcut icon" href="./favicon/favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body onload="pushPictures()">
+    <main>
+        <header>
+        <nav onclick="setFocusOnTop()">
+            <img src="./logo.svg" alt="Fotogramm-Logo">
+        </nav>
+        <h1 id="headline12" tabindex="-1" id="title">Das individuelle Fotoalbum</h1>
+        </header>
+
+        <div id="gallery"></div>
+
+        <dialog onclick="closeAbroad(event)" id="dialog" aria-labelledby="title" aria-describedby="dialog-img">
+            <button aria-label="Dialog schließen" class="buttonClose" onclick="closeDialog()">X</button>
+            <img id="dialog-img" class="dPicture">
+            <div class="rotation">
+                <button class="buttonX" onclick="backButton()">Back</button>
+                <div id="show">/</div>
+                <button class="buttonX" onclick="nextButton()">Next</button>
+            </div>
+        </dialog>
+        
+    </main>
+    <footer>
+
+    </footer>
+    <script src="./script.js"></script>
+</body>
+</html>
